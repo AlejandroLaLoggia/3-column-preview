@@ -1,0 +1,126 @@
+:root {
+
+    /*Primary*/
+
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+
+    /*Neutral*/
+
+    --Transparent_white: hsla(0, 0%, 100%, 0.75);    /*(paragraphs)*/
+    --Very_light_gray: hsl(0, 0%, 95%);    /*(background, headings, buttons)*/
+
+    /*Font*/
+    --fs_all: 15px;
+    --fs_title: 40px;
+    --fw_title: 700;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;   /*1 rem = 10 px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: var(--fs_all);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--Very_light_gray);
+}
+
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.card {
+    padding: 4.8rem;
+    width: 33%;
+    min-width: 307px;
+    max-width: 327px;
+}
+
+.card_1 {
+    background-color: var(--Bright_orange);
+}
+
+.card_2 {
+    background-color: var(--Dark_cyan);
+}
+
+.card_3 {
+    background-color: var(--Very_dark_cyan);
+}
+
+.card_title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: var(--fs_title);
+    font-weight: var(--fw_title);
+    text-transform: uppercase;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.card_info {
+    line-height: 25px;
+    margin-bottom: 3.6rem;
+}
+
+.card_button {
+    width: 146px;
+    height: 48px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    display: inline-block;
+    text-align: center;
+    background-color: var(--Very_light_gray);
+    border-radius: 24px;
+    text-decoration: none;
+}
+
+.card_1 .card_button {
+    color: var(--Bright_orange);
+}
+
+.card_2 .card_button {
+    color: var(--Dark_cyan);
+}
+
+.card_3 .card_button {
+    color: var(--Very_dark_cyan);
+}
+
+.attribution{
+    color: black;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (hover: hover) {
+
+    .card_button:hover {
+        border: 1px solid var(--Very_light_gray);
+        background-color: transparent;
+        color: var(--Very_light_gray);
+    }
+}
